@@ -1,10 +1,11 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { getItemFromLocalStorage } from '../../utils/getItemFromLocalStorage';
 import { ICats } from '../api/catsApiTypes';
 
 import { IFavorite } from './type';
 
 const initialState: IFavorite = {
-  items: [],
+  items: getItemFromLocalStorage(),
   limit: 15,
 };
 
